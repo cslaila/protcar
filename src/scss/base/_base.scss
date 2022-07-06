@@ -1,100 +1,71 @@
 @use '../abstracts' as *;
 
-/* Utils */
-
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
-}
-*,
-*::before,
-*::after {
+*{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
-*,
-*:focus {
-  outline: none !important;
+img{
+  max-width: 100%;
+  display: block;
 }
 
-a,
-button {
-  cursor: revert;
+button{
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
-ol,
-ul,
-menu {
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+li{
   list-style: none;
 }
-a {
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-table {
-  border-collapse: collapse;
-}
-textarea {
-  white-space: revert;
-}
-meter {
-  -webkit-appearance: revert;
-  appearance: revert;
-}
-::placeholder {
-  all: unset;
-}
-:where([hidden]) {
-  display: none;
-}
-:where([contenteditable]) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-}
-:where([draggable="true"]) {
-  -webkit-user-drag: element;
-}
 
-body,
-html * {
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  overflow-x: hidden !important;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  padding: 0;
-  margin: 0;
+h6{
+  font-family: 'Sora', sans-serif;
+  font-weight: $font_semibold;
 }
 
-.container{
-  z-index: 2;
+h1{
+  font-size: 5.9rem;
+  line-height: 64px;
 }
-
-a,
-button,
-.bt-close{
-  cursor: pointer;
+h2{
+  font-size: 3.8rem;
+  line-height: 48px;
 }
-
-.ui-widget.ui-widget-content.ui-autocomplete {
-    max-height: 250px;
-    overflow-y: auto;
-    overflow-x: hidden;
+h3{
+  font-size: 3.4rem;
+  line-height: 37px;
+}
+h4{
+  font-size: 2.6rem;
+  line-height: 33px;
+}
+h5{
+  line-height: 30px;
+  font-size: 2.4rem;
+}
+h6{
+  line-height: 25px;
+  font-size: 2rem;
 }
