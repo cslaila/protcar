@@ -1,0 +1,65 @@
+@mixin responsive($breakpoints) {
+
+  @if $breakpoints == atMedium {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoints == atLarge {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoints == atExtraLarge {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoints == atExtraMediumLarge {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @if $breakpoints == atExtraFullLarge {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+  @if $breakpoints == ipadPortrait {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+      @content;
+    }
+  }
+  @if $breakpoints == ipadLandscape {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+      @content;
+    }
+  }
+  @if $breakpoints == clearFix() {
+    &::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin box-shadow($left, $top, $radius, $color) {
+  box-shadow: $left $top $radius $color;
+  -webkit-box-shadow: $left $top $radius $color;
+  -moz-box-shadow: $left $top $radius $color;
+}
+
+@mixin gradient($color1, $color2) {
+  
+  background: -moz-linear-gradient(top,  $color1 0%, $color2 70%);
+  background: -webkit-linear-gradient(top,  $color1 0%,$color2 70%);
+  background: linear-gradient(to bottom,  $color1 0%,$color2 70%);
+  
+}
