@@ -1,25 +1,68 @@
 @use "../abstracts" as *;
 
-header{
-	padding: 30px 0;
+nav,
+.btn{
+	display: none;
+}
+.menu-section.on {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100vw;
+	height: 100vh;
+	background-color: $white;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	nav{
-		@include flex(row, space-between, center);
+		display: block;
 		ul{
-			display: flex;
-			li{
-				margin-left: 2.5rem;
-				font-size: 1.6rem;
-				a{
-					color: $color_gray03;
-					transition: color .3s ease;
-					&:hover{
-						color: $white;
+			text-align: center;
+			display: block;
+			a{
+				transition-duration: 0.5s;
+				font-size: 3rem;
+				line-height: 4rem;
+				display: block;
+			}
+		}
+	}
+	.btn{
+		display: block;
+	}
+	.menu-toggle{
+		position: absolute;
+		right: 25px;
+		top: 15px;
+	}
+}
+
+@include responsive (atLarge){
+	header{
+		padding: 30px 0;
+		nav{
+			@include flex(row, space-between, center);
+			ul{
+				display: flex;
+				li{
+					margin-left: 2.5rem;
+					font-size: 1.6rem;
+					a{
+						color: $color_gray03;
+						transition: color .3s ease;
+						&:hover{
+							color: $white;
+						}
+					}
+					&:first-child{
+						margin-left: 0;
 					}
 				}
-				&:first-child{
-					margin-left: 0;
-				}
 			}
+		}
+		.btn{
+			display: flex;
 		}
 	}
 }

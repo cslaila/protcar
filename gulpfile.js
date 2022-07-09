@@ -22,7 +22,7 @@ gulp.task('sass', compileSass); //executa a tarefa
 // automação css para plugins
 function pluginsCSS() {
     return gulp
-    .src(['src/css/lib/aos.css', 'src/css/lib/swiper.min.css']) //seleciona os arquivos individualmente
+    .src(['src/css/lib/aos.css', 'src/css/lib/swiper.min.css', 'src/css/lib/hamburgers.css']) //seleciona os arquivos individualmente
     .pipe(concat('plugins.css')) //concatena os arquivos
     .pipe(gulp.dest('dist/css/')) //salva o arquivo em css
     .pipe(browserSync.stream()); //atualiza o navegador assim que atualiza o arquivo

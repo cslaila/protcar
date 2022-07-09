@@ -17,7 +17,8 @@
     background-color: $primary_hover;
   }
 
-  &--price{
+  &--price,
+  &--menu{
     width: 195px;
     @include border-radius(20px);
     background-color: transparent;

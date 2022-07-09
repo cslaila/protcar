@@ -1,7 +1,12 @@
 @use '../abstracts' as *;
 
-@keyframes float {
+@keyframes floatY {
   50% {
-     transform: translate(10px, 0);
+     transform: translate(0, 5px);
   }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.02); }
 }

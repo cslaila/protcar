@@ -1,15 +1,12 @@
 @use "../abstracts" as *;
 
 .hero{
-  background: linear-gradient(73.28deg, #000000 36.73%, #282828 100%);
+  overflow-x: hidden !important;
   &__banner{
-    height: 660px;
-    position: relative;
+    margin-bottom: 67px;
     &--content{
-      padding-top: 70px;
       h1{
         width: 100%;
-        max-width: 534px;
         color: $white;
       }
       p{
@@ -19,6 +16,34 @@
         color: $white;
         font-size: 2rem;
         line-height: 30px;
+      }
+    }
+    &--image{
+      width: 100%;
+      max-width: 733px;
+      position: relative;
+      &::before,
+      &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+      }
+      &::before{
+        top: 12px;
+        left: 80px;
+        height: 170px;
+        background: url("/src/assets/shield.svg") no-repeat;
+        animation: pulse 3s infinite ease-in-out alternate;
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        bottom: 35px;
+        right: 0;
+        width: 282px;
+        height: 90px;
+        background: url("/src/assets/app-protcar.svg") no-repeat;
+        animation: floatY 7s infinite;
       }
     }
   }
