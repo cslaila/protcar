@@ -1,8 +1,11 @@
 @use "../abstracts" as *;
-
 nav,
-.btn{
+.btn,
+.menu-footer{
 	display: none;
+}
+.menu-section{
+	padding: 20px;
 }
 .menu-section.on {
 	position: absolute;
@@ -10,37 +13,133 @@ nav,
 	left:0;
 	width: 100vw;
 	height: 100vh;
-	background-color: $white;
+	background-color: $black;
 	z-index: 10;
 	display: flex;
-	justify-content: center;
+	justify-content: start !important;
 	align-items: center;
+	flex-direction: column;
+	.logo{
+		margin-right: 169px;
+	}
 	nav{
+		padding: 50px 0;
 		display: block;
 		ul{
 			text-align: center;
 			display: block;
 			a{
 				transition-duration: 0.5s;
-				font-size: 3rem;
-				line-height: 4rem;
+				font-size: 2.5rem;
+				line-height: 6.5rem;
+				font-weight: $font_semibold;
+				font-family: 'Sora', sans-serif;
+				color: $white;
 				display: block;
 			}
 		}
 	}
 	.btn{
-		display: block;
+		display: flex;
+		background-color: $primary;
+		border-color: $primary;
+		border-radius: 50px;
+		img{
+			filter: invert(100%);
+		}
+		span{
+			color: $black;
+		}
 	}
-	.menu-toggle{
-		position: absolute;
-		right: 25px;
-		top: 15px;
+	.hamburger{
+		.hamburger-inner,
+		.hamburger-inner::before,
+		.hamburger-inner::after{
+			background: white;
+		}
+	}
+	.menu-footer{
+		display: flex;
+		flex-direction: column;
+		small{
+			color: $color_gray02;
+			padding-top: 30px;
+			font-size: 1.2rem;
+		}
+		ul{
+			li{
+				a{
+					border: 1px solid $color_gray04;
+					border-radius: 29px;
+					padding: 10px;
+					span{
+						color: $white;
+						font-size: 1.6rem;
+						font-weight: $font_semibold;
+						padding: 0 10px;
+					}
+				}
+			}
+		}
 	}
 }
-
+.hamburger{
+	position: absolute;
+	right: -5px;
+	top: 5px;
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after{
+		background: white;
+		width: 29px;
+		height: 3px;
+	}
+}
 @include responsive (atLarge){
 	header{
-		padding: 30px 0;
+		width: 100%;
+		position: fixed;
+		padding: 10px 0 30px 0;
+		&.fixed{
+			padding-bottom: 0px;
+			background-color: $white;
+			top: 0;
+			z-index: 10;
+			transition: all .2s ease-in-out;
+			.logo{
+				filter: invert(100%);
+			}
+			ul{
+				li{
+					border-bottom: 2px solid;
+					border-color: transparent;
+					&:hover{
+						border-bottom: 2px solid $primary;
+					}
+					a{
+						color: $black;
+						transition: all .3s ease-in;
+						&:hover{
+							color: $black;
+						}
+					}
+				}
+			}
+			.btn--menu{
+				background-color: $primary;
+				border-color: $primary;
+				span{
+					color: $black;
+				}
+				img{
+					filter: invert(100%);
+				}
+				&:hover{
+					background-color: $primary_hover;
+					border-color: $primary_hover;
+				}
+			}
+		}
 		nav{
 			@include flex(row, space-between, center);
 			ul{

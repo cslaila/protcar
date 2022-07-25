@@ -3,47 +3,105 @@
 .hero{
   overflow-x: hidden !important;
   &__banner{
-    margin-bottom: 67px;
+    margin-bottom: 40px;
     &--content{
       h1{
         width: 100%;
         color: $white;
+        font-size: 3.4rem;
+        line-height: 37px;
+        padding-top: 53px;
       }
       p{
         width: 100%;
         max-width: 402px;
-        padding: 35px 0 65px 0;
+        padding: 35px 0 40px 0;
         color: $white;
-        font-size: 2rem;
-        line-height: 30px;
+        font-size: 1.6rem;
+        line-height: 22px;
+      }
+      .btn{
+        display: block;
       }
     }
     &--image{
       width: 100%;
       max-width: 733px;
       position: relative;
-      &::before,
-      &::after{
-        position: absolute;
-        content: '';
-        width: 100%;
+      .banner-mob{
+        padding-top: 62px;
+        margin-left: 10px;
       }
-      &::before{
-        top: 12px;
-        left: 80px;
-        height: 170px;
-        background: url("/src/assets/shield.svg") no-repeat;
-        animation: pulse 3s infinite ease-in-out alternate;
+    }
+  }
+  &__check{
+    padding-top: 40px;
+    .row > div{
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > div{
+        margin-left: 23px;
       }
-      &::after{
-        position: absolute;
-        content: '';
-        bottom: 35px;
-        right: 0;
-        width: 282px;
-        height: 90px;
-        background: url("/src/assets/app-protcar.svg") no-repeat;
-        animation: floatY 7s infinite;
+      img{
+        margin-right: 12px;
+      }
+    }
+    span{
+      font-size: 2rem;
+    }
+  }
+
+  @include responsive(atLarge){
+    padding-top: 160px;
+    &__banner{
+      margin-bottom: 67px;
+      &--content{
+        h1{
+          font-size: 5.9rem;
+          line-height: 64px;
+        }
+        p{
+          font-size: 2rem;
+          line-height: 30px;
+          padding-bottom: 65px;
+        }
+      }
+      &--image{
+        &::before,
+        &::after{
+          position: absolute;
+          content: '';
+          width: 100%;
+        }
+        &::before{
+          top: 12px;
+          left: 80px;
+          height: 170px;
+          background: url("/src/assets/shield.svg") no-repeat;
+          animation: pulse 2s infinite ease-in-out alternate;
+        }
+        &::after{
+          position: absolute;
+          content: '';
+          bottom: 35px;
+          right: 0;
+          width: 282px;
+          height: 90px;
+          background: url("/src/assets/app-protcar.svg") no-repeat;
+          animation: floatY 4s infinite;
+        }
+      }
+    }
+    &__check{
+      padding-top: 0;
+      border-top: 1px solid #282828;
+      .row > div{
+        padding: 40px 0;
+      }
+      span{
+        padding-left: 24px;
       }
     }
   }

@@ -15,10 +15,10 @@
 </head>
 <body>
 
-	<header>
+	<header id="js-header">
 		<div class="container">
 			<div class="menu-section d-flex justify-content-between align-items-center">
-				<a href="">
+				<a href="" class="logo">
 					<img src="/src/assets/logo.svg" alt="Protcar"/>
 				</a>
 				<button class="hamburger hamburger--collapse menu-toggle d-lg-none" type="button" id="js-btn-mobile">
@@ -48,39 +48,110 @@
 				</nav>
 
 				<a href="" class="btn btn--menu">
-					<img src="/src/assets/icon-chat.svg" alt="Icone Chat">
+					<img src="/src/assets/icons/icon-chat.svg" alt="Icone Chat">
 					<span>Cotação Online</span>
 				</a>
+
+				
+				<div class="menu-footer d-lg-none">
+					<small class="text-center">Todos os direitos reservados  © 2022<br />
+					PROTCAR • ASSOCIACAO DE BENEFICIOS <br />13.580.635/0001-57</small>
+
+					<ul class="d-flex mt-5 gap-4">
+						<li>
+							<a href="">
+								<img src="/src/assets/icons/insta.png" alt="Instagram">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/src/assets/icons/face.png" alt="Facebook">
+							</a>
+						</li>
+						<li>
+							<a href="" class="d-flex align-items-center">
+								<img class="ps-3" src="/src/assets/icons/whats.png" alt="Whatsapp">
+								<span>Whatsapp</span>
+							</a>
+						</li>
+					</ul>
+				</div>
 
 			</div>
 		</div>
 	</header>
+	
   <section class="hero">
 		<div class="hero__banner">
 			<div class="container">
 				<div class="row">
-					<div class="d-flex align-items-center">
+					<div class="d-flex align-items-center flex-column flex-lg-row">
 						<div class="hero__banner--content">
-							<h1>A proteção<br />
+							<h1 class="text-center text-lg-start pt-lg-0">A proteção<br />
 								que o seu veículo <br />merece</h1>
-							<p>Seja PROTCAR e tenha a proteção veicular
+							<p class="text-center text-lg-start">Seja PROTCAR e tenha a proteção veicular
 								completa que cabe no seu bolso!</p>
-							<a href="" class="btn">
-								<span>Cotação Online</span>
-								<img src="/src/assets/icon-arrow.png" alt="Icone Cotaçao">
-							</a>
+								<a href="" class="btn d-flex mx-auto mx-lg-0">
+									<span>Cotação Online</span>
+									<img src="/src/assets/icons/icon-arrow.png" alt="Icone Cotaçao">
+								</a>
 						</div>
 
 						<div class="hero__banner--image">
-							<img src="/src/assets/banner-car.png" alt="">
+							<img class="d-none d-lg-block" src="/src/assets/banner-car.png" alt="">
+							<img class="d-lg-none banner-mob" src="/src/assets/banner-car-mob.png" alt="">
 						</div>
-						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero__check">
+			<div class="container">
+				<div class="row text-white d-flex flex-lg-row flex-column">
+					<div class="col-lg-3">
+						<div class="d-flex gap-4 gap-lg-0">
+							<img src="/src/assets/icons/icon-tool.svg" alt="Proteção Completa">
+							<span class="text-center">Proteção completa</span>
+						</div>
+						<img class="d-lg-none" src="/src/assets/icons/icon-check.svg" alt="Check">
+					</div>
+					<div class="col-lg-3">
+						<div class="d-flex gap-4 gap-lg-0">
+							<img src="/src/assets/icons/icon-24h.svg" alt="Proteção Completa">
+							<span>Assistência 24 horas</span>
+						</div>
+						<img class="d-lg-none" src="/src/assets/icons/icon-check.svg" alt="Check">
+					</div>
+					<div class="col-lg-3">
+						<div class="d-flex gap-4 gap-lg-0">
+							<img src="/src/assets/icons/icon-clube.svg" alt="Proteção Completa">
+							<span>Clube de desconto</span>
+						</div>
+						<img class="d-lg-none" src="/src/assets/icons/icon-check.svg" alt="Check">
+					</div>
+					<div class="col-lg-3">
+						<div class="d-flex gap-4 gap-lg-0">
+							<img src="/src/assets/icons/icon-shield.svg" alt="Proteção Completa">
+							<span>O melhor preço</span>
+						</div>
+						<img class="d-lg-none" src="/src/assets/icons/icon-check.svg" alt="Check">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+
+	<section class="about">
+		<div class="container">
+			<div class="row">
+				
+			</div>
+		</div>
+	</section>
+
+
+	<!-- JS -->
 	<script type="text/javascript" src="/src/js/lib/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript" src="/src/js/lib/popper.min.js"></script>
 	<script type="text/javascript" src="/src/js/lib/bootstrap.min.js"></script>
