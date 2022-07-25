@@ -106,3 +106,153 @@
     }
   }
 }
+
+.about{
+  background-color: $white;
+    padding: 56px 0 81px 0;
+  &__text{
+    p{
+      font-weight: $font_medium;
+      font-size: 1.6rem;
+      padding: 5px 20px;
+      border: 1px solid rgba(10, 10, 10, 0.287);
+      max-width: 117px;
+    }
+    h2{
+      font-size: 2.6rem;
+      max-width: 500px;
+      line-height: 1.3;
+    }
+    h6{
+      font-size: 1.6rem;
+      max-width: 265px;
+      color: $color_gray04;
+      font-weight: $font_normal;
+      line-height: 1.6;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn--associate{
+      margin: 25px 0;
+    }
+  }
+  &__info{
+    margin-top: 45px;
+    width: 100%;
+    &--card{
+      width: 100%;
+      margin-bottom: 10px;
+      p{
+        font-size: 1.4rem;
+        font-weight: $font_normal;
+        width: 118px;
+      }
+      h2{
+        font-size: 2.6rem;
+      }
+      .box,
+      .box-year{
+        background-color: $color_gray01;
+        border-radius: 15px;
+        width: 161px;
+        padding-left: 22px;
+        height: 114px;
+      }
+      .box-year{
+        max-height: 152px;
+      }
+      .box-image{
+        margin-top: -31px;
+        width: 156px;
+      }
+    }
+    &--protection{
+      background-color: $black;
+      border-radius: 15px;
+      width: 330px;
+      padding: 22px 0 22px 25px;
+      .shield{
+        margin-bottom: 18px;
+        width: 100%;
+        max-width: 198px;
+        padding: 7.5px 0 7.5px 16px;
+        span{
+          font-size: 1.4rem;
+          font-weight: $font_semibold;
+        }
+      }
+      ul{
+        padding: 0;
+        padding-left: 7px;
+        &:first-child{
+          padding-left: 0;
+        }
+        li{
+          font-size: 1.6rem;
+          font-weight: $font_normal;
+          padding-left: 7px;
+          margin-bottom: 24px;
+          &:first-child{
+            padding-left: 0;
+            padding-right: 80px;
+          }
+        }
+        &:last-child{
+          li{
+            &:first-child{
+              padding-right: 91px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(atLarge){
+    padding: 180px 0 200px 0;
+    &__text{
+      h2{
+        font-size: 3.8rem;
+      }
+      h6{
+        font-size: 2rem;
+        max-width: 440px;
+      }
+    }
+    &__info{
+      max-width: 582px;
+      &--card{
+        margin-bottom: 22px;
+        h2{
+          font-size: 3.8rem;
+        }
+        p{
+          width: 100%;
+          font-size: 2rem;
+        }
+        .box,
+        .box-year{
+          width: 277px;
+          height: 151px;
+          padding-left: 38px;
+        }
+        .box-image{
+          width: 277px;
+          margin-top: -54px;
+        }
+      }
+      &--protection{
+        width: 568px;
+        padding-left: 35px;
+        ul{
+          li{
+            margin-bottom: 0;
+            padding-left: 7px;
+            &:first-child{
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

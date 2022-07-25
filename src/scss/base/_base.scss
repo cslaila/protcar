@@ -1,5 +1,10 @@
 @use '../abstracts' as *;
 
+.container{ 
+  width: 100%;
+  max-width: 1291px;
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
