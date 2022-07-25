@@ -15,8 +15,11 @@
   }
   &:hover{
     background-color: $primary_hover;
+    border: 1px solid $primary_hover;
   }
-
+  &--associate{
+    width: 274px;
+  }
   &--price,
   &--menu{
     width: 195px;
