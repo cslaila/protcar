@@ -1,2 +1,107 @@
 @use "../abstracts" as *;
 
+.cards{
+  padding-bottom: 60px;
+  &__protection,
+  &__assistance{
+    gap: 10px;
+    padding-bottom: 10px;
+    &--itemsone,
+    &--itemstwo{
+      background-color: $white;
+      padding: 16px 34px 16px 20px;
+      @include border-radius(15px);
+      img{
+        padding-right: 20px;
+      }
+      span{
+        font-size: 1.6rem;
+        font-weight: $font_medium;
+      }
+    }
+  }
+  &__protection{
+    &--itemsone{
+      &:nth-child(3),
+      &:nth-child(4){
+        width: 330px;
+      }
+    }
+    &--itemstwo{
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4){
+        width: 330px;
+      }
+    }
+  }
+  &__assistance{
+    &--itemsone,
+    &--itemstwo{
+      width: 330px;
+    }
+  }
+
+  @include responsive(atMedium){
+    padding-bottom: 160px;
+    &__protection,
+    &__assistance{
+      gap: 15px;
+      padding-bottom: 15px;
+    }
+    &__protection{
+      &--itemsone{
+        padding: 16px 34px 16px 20px;
+        width: 160px;
+        &:nth-child(3){
+          width: 310px;
+        }
+        &:nth-child(4){
+          width: 330px;
+        }
+        &:nth-child(5){
+          width: 180px;
+        }
+      }
+      &--itemstwo{
+        &:nth-child(1){
+          width: 210px;
+        }
+        &:nth-child(2){
+          width: 262px;
+        }
+        &:nth-child(3){
+          width: 190px;
+        }
+        &:nth-child(4){
+          width: 254px;
+        }
+      }
+    }
+
+    &__assistance{
+      &--itemsone{
+        width: 225px;
+        &:nth-child(3){
+          width: 265px;
+        }
+        &:nth-child(4),
+        &:nth-child(5){
+          width: 190px;
+        }
+      }
+      &--itemstwo{
+        &:nth-child(1),
+        &:nth-child(2){
+          width: 220px;
+        }
+        &:nth-child(3){
+          width: 242px;
+        }
+        &:nth-child(4){
+          width: 207px;
+        }
+      }
+    }
+  }
+}
