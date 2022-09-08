@@ -17,7 +17,6 @@
         max-width: 402px;
         padding: 35px 0 40px 0;
         color: $white;
-        font-size: 1.6rem;
         line-height: 22px;
       }
       .btn{
@@ -114,7 +113,6 @@
   &__text{
     p{
       font-weight: $font_medium;
-      font-size: 1.6rem;
       padding: 5px 20px;
       border: 1px solid rgba(10, 10, 10, 0.287);
       max-width: 117px;
@@ -266,7 +264,6 @@
   }
   p{
     color: $color_gray04;
-    font-size: 1.6rem;
     max-width: 307px;
     margin: 0 auto;
     padding-top: 15px;
@@ -283,6 +280,142 @@
       max-width: 580px;
       padding-top: 30px;
       font-size: 2rem;
+    }
+  }
+}
+
+.info{
+  background-color: $color_gray01;
+  &__card{
+    &__club,
+    &__price,
+    &__protection{
+      width: 330px;
+      border-radius: 15px;
+      margin: 0 auto 24px auto;
+      img, h5, p{
+        padding: 0 28px 0 20px;
+        margin-bottom: 0;
+      }
+      img{
+        padding-top: 20px;
+        padding-bottom: 26px;
+        max-width: 105px;
+      }
+      h5{
+        padding-bottom: 31px;
+        font-weight: $font_semibold;
+      }
+      p{
+        padding-bottom: 37px;
+      }
+    }
+    &__club{
+      background-color: $black;
+      h5{
+        color: $white;
+      }
+      p{
+        color: $color_gray03;
+      }
+      
+    }
+    &__price{
+      background-color: $primary;
+      h5, p{
+        color: $black;
+      }
+    }
+    &__protection{
+      background-image: url($media + 'associate-mob.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 593px;
+      h4{
+        max-width: 238px;
+        color: $white;
+        padding: 40px 0 0 32px;
+      }
+      .btn--associate{
+        max-width: 240px;
+        height: 60px;
+        margin: 32px 0 0 32px;
+        img{
+          padding: 9px 0;
+        }
+        a{
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include responsive(atExtraLarge){
+      &__club,
+      &__price,
+      &__protection{
+        width: 630px;
+        img,h5,p{
+          margin: 40px 0 0 40px;
+        }
+        h5{
+          font-size: 3.5rem;
+          margin: 40px 0 0 0;
+        }
+        p{
+          font-size: 2rem;
+          padding-bottom: 40px;
+          max-width: 480px;
+        }
+      }
+      &__protection{
+        background-image: url($media + 'associate.png');
+        width: 100%;
+        height: 322px;
+        h4{
+          font-size: 3.8rem;
+          max-width: 620px;
+          line-height: 1.3;
+          padding: 68px 0 0 80px;
+        }
+        .btn--associate{
+          margin-left: 80px;
+          img{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.app{
+  background-color: $white;
+  padding: 160px 0 71px 0;
+  margin-top: -100px;
+  &__card{
+    background-color: $primary;
+    border-radius: 15px;
+    max-width: 330px;
+    h4{
+      max-width: 281px;
+      margin: 0 auto;
+      padding: 35px 0;
+    }
+    a{
+      border: 1px solid rgba(10, 10, 10, 0.24);
+      padding: 20px 34px;
+      p{
+        font-weight: $font_semibold;
+        color: $black;
+      }
+    }
+    .application{
+      img{
+        height: 326px;
+        max-width: 102.5%;
+        margin: 63px 0 15px 0;
+      }
     }
   }
 }

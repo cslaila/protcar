@@ -28,6 +28,7 @@ html{
 }
 
 body{
+  overflow-x: hidden;
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
   background: linear-gradient(73.28deg, #000000 36.73%, #282828 100%) no-repeat;
@@ -39,6 +40,10 @@ a{
 }
 li{
   list-style: none;
+}
+
+p{
+  font-size: 1.6rem;
 }
 
 h1,
@@ -74,4 +79,8 @@ h5{
 h6{
   line-height: 25px;
   font-size: 2rem;
+}
+
+.overflow-x{
+  overflow-x: hidden;
 }
