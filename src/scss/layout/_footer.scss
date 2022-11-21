@@ -1,1 +1,13 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
+
+footer {
+  background: $color_gray01;
+  padding: 180px 0 80px 0;
+  .infos {
+    .social {
+      a {
+        height: 48px;
+      }
+    }
+  }
+}

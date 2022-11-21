@@ -1,49 +1,49 @@
 @use "../abstracts" as *;
 
-.btn{
+.btn,
+button {
   @include flex(row, center, center);
   font-size: 1.6rem;
   background-color: $primary;
   @include border-radius(35px);
   width: 227px;
   padding: 18px 30px;
-  transition: all .2s	ease-in;
-  span{
+  transition: all 0.2s ease-in;
+  span {
     color: $black;
     margin-right: 22px;
     font-weight: $font_semibold;
   }
-  &:hover{
+  &:hover {
     background-color: $primary_hover;
     border: 1px solid $primary_hover;
   }
-  &--associate{
+  &--associate {
     width: 274px;
   }
   &--price,
-  &--menu{
+  &--menu {
     width: 195px;
     @include border-radius(20px);
     background-color: transparent;
     padding: 10px 23px;
     border: 1px solid $color_gray04;
-    span{
+    span {
       color: $white;
       margin-left: 0.75rem;
       font-weight: $font_medium;
       margin-right: 0px;
     }
-    &:hover{
+    &:hover {
       background-color: $primary;
       border-color: $primary;
-      span{
+      span {
         color: $black;
         border-color: $primary;
       }
-      img{
+      img {
         filter: brightness(0);
       }
     }
   }
-  
 }
